@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drink"
+    tools:context="com.example.foodorder.drink">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drink"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="#e53935"/>
+
+    <ImageView
+        android:id="@+id/chicken"
+        android:layout_width="135dp"
+        android:layout_height="120dp"
+        android:src="@drawable/soft_drink"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soft Drink"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12$"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="90dp"
+        android:id="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/green"
+        android:layout_width="135dp"
+        android:layout_height="120dp"
+        android:src="@drawable/beer"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="180dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beer"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="190dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="28$"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="220dp"/>
+
+    <ImageView
+        android:id="@+id/pasta"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:src="@drawable/cocktail"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="310dp"
+        android:layout_marginRight="250dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cocktail"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_marginTop="315dp"
+        android:layout_marginLeft="180dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="75$"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="345dp"/>
+
+    <ImageView
+        android:id="@+id/ceasar"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:src="@drawable/wine"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="450dp"
+        android:layout_marginRight="250dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wine"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_marginTop="455dp"
+        android:layout_marginLeft="180dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100$"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_marginTop="485dp"
+        android:layout_marginLeft="180dp"
+        android:id="@+id/textView3" />
+
+    <CheckBox
+        android:id="@+id/chickenBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="185dp"/>
+
+    <CheckBox
+        android:id="@+id/greenBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="185dp"/>
+
+    <CheckBox
+        android:id="@+id/pastaBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_marginTop="385dp"
+        android:layout_marginLeft="185dp"/>
+
+    <CheckBox
+        android:id="@+id/ceasarBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="185dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/nextbutton"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
