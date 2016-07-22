@@ -9,17 +9,8 @@ import android.widget.CheckBox;
 
 public class maindish extends AppCompatActivity {
 
-    int first = 0;
-    int second = 0;
-    int third = 0;
-    int fourth = 0;
-
-    int fifth = 0;
-    int sizth = 0;
-    int seventh = 0;
-    int eighth = 0;
-
-
+    int lastprice = 0;
+    int price = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +19,7 @@ public class maindish extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            first = extras.getInt("CCB");
-            second = extras.getInt("CGB");
-            third = extras.getInt("CCSB");
-            fourth = extras.getInt("CPB");
+            lastprice = extras.getInt("PICA");
         }
 
         Button next = (Button) findViewById(R.id.nextbutton);
@@ -39,34 +27,28 @@ public class maindish extends AppCompatActivity {
             public void onClick(View v) {
                 CheckBox beefsteakBox = (CheckBox) findViewById(R.id.chickenBox);
                 if (beefsteakBox.isChecked()) {
-                    fifth = 1;
+                    price = price + 250;
                 }
 
                 CheckBox greenBox = (CheckBox) findViewById(R.id.greenBox);
                 if (greenBox.isChecked()) {
-                    sizth = 1;
+                    price = price + 230;
                 }
 
                 CheckBox ceasarBox = (CheckBox) findViewById(R.id.ceasarBox);
                 if (ceasarBox.isChecked()) {
-                    seventh = 1;
+                    price = price + 220;
                 }
 
                 CheckBox pastaBox = (CheckBox) findViewById(R.id.pastaBox);
                 if (pastaBox.isChecked()) {
-                    eighth = 1;
+                    price = price + 180;
                 }
 
-                Intent intent = new Intent(maindish.this, drink.class);
-                intent.putExtra("CCB", first);
-                intent.putExtra("CGB", second);
-                intent.putExtra("CCSB", third);
-                intent.putExtra("CPB", fourth);
+                price = price + lastprice;
 
-                intent.putExtra("CBB", fifth);
-                intent.putExtra("CLB", sizth);
-                intent.putExtra("CIB", seventh);
-                intent.putExtra("CPPB", eighth);
+                Intent intent = new Intent(maindish.this, drink.class);
+                intent.putExtra("PICB", price);
                 startActivity(intent);
                 finish();
             }

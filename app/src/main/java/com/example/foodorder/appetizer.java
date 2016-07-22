@@ -9,10 +9,7 @@ import android.widget.CheckBox;
 
 public class appetizer extends AppCompatActivity {
 
-    int first = 0;
-    int second = 0;
-    int third = 0;
-    int fourth = 0;
+    int price = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,29 +22,26 @@ public class appetizer extends AppCompatActivity {
             public void onClick(View v) {
                 CheckBox chickenBox = (CheckBox) findViewById(R.id.chickenBox);
                 if (chickenBox.isChecked()) {
-                    first = 1;
+                    price = price + 100;
                 }
 
                 CheckBox greenBox = (CheckBox) findViewById(R.id.greenBox);
                 if (greenBox.isChecked()) {
-                    second = 1;
+                    price = price + 85;
                 }
 
                 CheckBox ceasarBox = (CheckBox) findViewById(R.id.ceasarBox);
                 if (ceasarBox.isChecked()) {
-                    third = 1;
+                    price = price + 95;
                 }
 
                 CheckBox pastaBox = (CheckBox) findViewById(R.id.pastaBox);
                 if (pastaBox.isChecked()) {
-                    fourth = 1;
+                    price = price + 100;
                 }
 
                 Intent intent = new Intent(appetizer.this, maindish.class);
-                intent.putExtra("CCB", first);
-                intent.putExtra("CGB", second);
-                intent.putExtra("CCSB", third);
-                intent.putExtra("CPB", fourth);
+                intent.putExtra("PICA", price);
                 startActivity(intent);
                 finish();
             }

@@ -9,20 +9,8 @@ import android.widget.CheckBox;
 
 public class drink extends AppCompatActivity {
 
-    int first = 0;
-    int second = 0;
-    int third = 0;
-    int fourth = 0;
-
-    int fifth = 0;
-    int sizth = 0;
-    int seventh = 0;
-    int eighth = 0;
-
-    int nineth = 0;
-    int tenth = 0;
-    int eleventh = 0;
-    int twelveth = 0;
+    int lastprice = 0;
+    int price = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +19,7 @@ public class drink extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            first = extras.getInt("CCB");
-            second = extras.getInt("CGB");
-            third = extras.getInt("CCSB");
-            fourth = extras.getInt("CPB");
-
-            fifth = extras.getInt("CBB");
-            sizth = extras.getInt("CLB");
-            seventh = extras.getInt("CIB");
-            eighth = extras.getInt("CPPB");
+            lastprice = extras.getInt("PICB");
         }
 
         Button next = (Button) findViewById(R.id.nextbutton);
@@ -48,39 +28,28 @@ public class drink extends AppCompatActivity {
 
                 CheckBox beefsteakBox = (CheckBox) findViewById(R.id.chickenBox);
                 if (beefsteakBox.isChecked()) {
-                    nineth = 1;
+                    price = price + 12;
                 }
 
                 CheckBox greenBox = (CheckBox) findViewById(R.id.greenBox);
                 if (greenBox.isChecked()) {
-                    tenth = 1;
+                    price = price + 28;
                 }
 
                 CheckBox ceasarBox = (CheckBox) findViewById(R.id.ceasarBox);
                 if (ceasarBox.isChecked()) {
-                    eleventh = 1;
+                    price = price + 75;
                 }
 
                 CheckBox pastaBox = (CheckBox) findViewById(R.id.pastaBox);
                 if (pastaBox.isChecked()) {
-                    twelveth = 1;
+                    price = price + 100;
                 }
 
+                price = price + lastprice;
+
                 Intent intent = new Intent(drink.this, dessert.class);
-                intent.putExtra("CCB", first);
-                intent.putExtra("CGB", second);
-                intent.putExtra("CCSB", third);
-                intent.putExtra("CPB", fourth);
-
-                intent.putExtra("CBB", fifth);
-                intent.putExtra("CLB", sizth);
-                intent.putExtra("CIB", seventh);
-                intent.putExtra("CPPB", eighth);
-
-                intent.putExtra("CSB", nineth);
-                intent.putExtra("CBEB", tenth);
-                intent.putExtra("CCOB", eleventh);
-                intent.putExtra("CWB", twelveth);
+                intent.putExtra("PICC", price);
                 startActivity(intent);
                 finish();
             }
